@@ -83,7 +83,7 @@ Your server should always be behind a firewall of some kind, so you'll need to o
 
 💡Note you will have to change `mverse.example.com` and `examplepass` to match the cluster you are joining/starting.
 
-At this point you can also add any additional options to this java command as needed to customize for your environment, things like `-Xmx1024M -Xms1024M`, etc.
+💡At this point you can also add any additional options to this java command as needed to customize for your environment, things like `-Xmx1024M -Xms1024M`, etc.
 
 You should see some output in the logs now related to the cluster and Infinispan.
 
