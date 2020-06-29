@@ -9,19 +9,15 @@ while it is in alpha. For these instructions we'll assume your minecraft server 
 
 If you already have a recent forge-enabled server installed you can skip these steps.
 
-- `mkdir ~/mverse`
-
-- `cd ~/mverse`
-
-- `export FORGE_VERSION=1.15.2-31.2.27`
-
-- `wget http://files.minecraftforge.net/maven/net/minecraftforge/forge/$FORGE_VERSION/forge-$FORGE_VERSION-launcher.jar`
-
-- `wget http://files.minecraftforge.net/maven/net/minecraftforge/forge/$FORGE_VERSION/forge-$FORGE_VERSION-installer.jar`
-
-- `java -jar forge-$FORGE_VERSION-installer.jar --installServer`
-
-- `java -cp "forge-$FORGE_VERSION-launcher.jar" "net.minecraftforge.server.ServerMain" nogui`
+```
+mkdir ~/mverse
+cd ~/mverse
+export FORGE_VERSION=1.15.2-31.2.27
+wget http://files.minecraftforge.net/maven/net/minecraftforge/forge/$FORGE_VERSION/forge-$FORGE_VERSION-launcher.jar
+wget http://files.minecraftforge.net/maven/net/minecraftforge/forge/$FORGE_VERSION/forge-$FORGE_VERSION-installer.jar
+java -jar forge-$FORGE_VERSION-installer.jar --installServer
+java -cp "forge-$FORGE_VERSION-launcher.jar" "net.minecraftforge.server.ServerMain" nogui
+```
 
 - Accept EULA by editing eula.txt
 
@@ -33,9 +29,11 @@ If you already have a recent forge-enabled server installed you can skip these s
 ## 2) Install MVerse
 
 ### Download mod jar to server mods folder
-- `cd ~/mverse/mods`
-- `export MVERSE_VERSION=0.2.1`
-- `wget https://github.com/johnsusek/mverse/releases/download/$MVERSE_VERSION/mverse-server-$MVERSE_VERSION.jar`
+```
+cd ~/mverse/mods
+export MVERSE_VERSION=0.2.1
+wget https://github.com/johnsusek/mverse/releases/download/$MVERSE_VERSION/mverse-server-$MVERSE_VERSION.jar
+```
 
 ## 3) Set Up Clustering
 
