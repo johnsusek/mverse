@@ -38,6 +38,8 @@ If you already have a recent forge-enabled server installed you can skip these s
 
 ## 3) Set Up Clustering
 
+Note, clustering is only recommended for dedicated servers that are up 24/7.
+
 ### ☞ I want to join a cluster
 
 * Find a cluster looking for a new server, the admin will give you the address and password to use.
