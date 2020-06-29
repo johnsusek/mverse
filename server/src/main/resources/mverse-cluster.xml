@@ -51,7 +51,7 @@
    />
 
    <AUTH auth_class="org.jgroups.auth.SimpleToken"
-   auth_value="${mverse.cluster_secret}" />
+   auth_value="${mverse.cluster_password}" />
 
    <pbcast.GMS print_local_addr="false"
                join_timeout="${jgroups.join_timeout:2000}"

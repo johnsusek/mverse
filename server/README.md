@@ -31,8 +31,8 @@ while it is in alpha.
 
 ### Copy mod jar to minecraft mods folder
 - `cd ~/mverse/mods`
-- `export MVERSE_VERSION=0.2`
-- `wget https://github.com/johnsusek/mverse/releases/download/0.2/mverse-server-$MVERSE_VERSION.jar`
+- `export MVERSE_VERSION=0.2.1`
+- `wget https://github.com/johnsusek/mverse/releases/download/0.2.1/mverse-server-$MVERSE_VERSION.jar`
 
 ## 3) Set Up Clustering
 
@@ -75,7 +75,7 @@ Your server should always be behind a firewall of some kind, so you'll need to o
 
 - `export FORGE_VERSION=1.15.2-31.2.27`
 
-- `export MVERSE_VERSION=0.2`
+- `export MVERSE_VERSION=0.2.1`
 
 - `java -cp "./mods/mverse-server-$MVERSE_VERSION.jar:forge-$FORGE_VERSION-launcher.jar" -Djgroups.dns.query=mverse.example.com -Dmverse.cluster_password=examplepass "net.minecraftforge.server.ServerMain" nogui`
 
