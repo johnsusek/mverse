@@ -89,7 +89,7 @@ You should see some output in the logs now related to the cluster and Infinispan
 
 > If two machines can't find each other and start a cluster, double-check the firewall and that DNS records are in place. You should be able to telnet to each machine on port 7800, and `host yourcluster.example.com` should return records for each server.
 
-Once servers indicate they are joined into a cluster (you will see this in the logs) there's nothing more for you to do. Data will be saved to a folder called `cluster`, don't modify or remove that. Otherwise that's it, the player data will sync among cluster machines.
+Once servers indicate they are joined into a cluster (you will see this in the logs) there's nothing more for you to do. Data will be saved to a folder called `cluster`, don't modify or remove that.
 
 ## Wrapping Up
 
