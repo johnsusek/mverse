@@ -1,5 +1,7 @@
 # MVerse
 
+<img align="right" src="https://user-images.githubusercontent.com/611996/85967969-4fe09d80-b989-11ea-9100-3976bf05ab8a.png">
+
 A Minecraft Forge mod to easily cluster Minecraft servers into a multiverse.
 
 Once installed on your servers, all player data is synchronized and the cluster becomes the "source of truth" for player data.
