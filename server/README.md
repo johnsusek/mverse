@@ -3,7 +3,7 @@
 MVerse is fully functional but experimental right now.
 Don't just add this to your main minecraft server, at least without making a backup copy first.
 It's suggested to set up a new server for MVerse right now,
-while it is in alpha.
+while it is in alpha. For these instructions we'll assume your minecraft server is installed to ~/mverse but it can be anywhere. 
 
 ## 1) Install Minecraft Forge
 
