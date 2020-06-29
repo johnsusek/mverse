@@ -3,9 +3,11 @@
 MVerse is fully functional but experimental right now.
 Don't just add this to your main minecraft server, at least without making a backup copy first.
 It's suggested to set up a new server for MVerse right now,
-while it is in alpha.
+while it is in alpha. For these instructions we'll assume your minecraft server is installed to ~/mverse but it can be anywhere. 
 
 ## 1) Install Minecraft Forge
+
+If you already have a recent forge-enabled server installed you can skip these steps.
 
 - `mkdir ~/mverse`
 
@@ -24,8 +26,9 @@ while it is in alpha.
 - Accept EULA by editing eula.txt
 
 - Try to launch again, it should be running a plain forge server now and prepare the spawn area.
+  - You will see a message "Unable to find spawn biome" and nothing else, give it a few minutes.
 
-- After spawn is prepared, close down server (Ctrl-C, wait til save is done then Ctrl-C again) and continue on to installing MVerse
+- After spawn is prepared, close down server (Ctrl-C) and continue on to installing MVerse
 
 ## 2) Install MVerse
 
@@ -35,6 +38,8 @@ while it is in alpha.
 - `wget https://github.com/johnsusek/mverse/releases/download/0.2.1/mverse-server-$MVERSE_VERSION.jar`
 
 ## 3) Set Up Clustering
+
+Note, clustering is only recommended for dedicated servers that are up 24/7.
 
 ### ☞ I want to join a cluster
 
@@ -77,17 +82,17 @@ Your server should always be behind a firewall of some kind, so you'll need to o
 
 - `export MVERSE_VERSION=0.2.1`
 
+💡In the following command, you will have to change `mverse.example.com` and `examplepass` to match the cluster you are joining/starting.
+
 - `java -cp "./mods/mverse-server-$MVERSE_VERSION.jar:forge-$FORGE_VERSION-launcher.jar" -Djgroups.dns.query=mverse.example.com -Dmverse.cluster_password=examplepass "net.minecraftforge.server.ServerMain" nogui`
 
-💡Note you will have to change `mverse.example.com` and `examplepass` to match the cluster you are joining/starting.
-
-At this point you can also add any additional options to this java command as needed to customize for your environment, things like `-Xmx1024M -Xms1024M`, etc.
+💡At this point you can also add any additional options to this java command as needed to customize for your environment, things like `-Xmx1024M -Xms1024M`, etc.
 
 You should see some output in the logs now related to the cluster and Infinispan.
 
 > If two machines can't find each other and start a cluster, double-check the firewall and that DNS records are in place. You should be able to telnet to each machine on port 7800, and `host yourcluster.example.com` should return records for each server.
 
-Once servers indicate they are joined into a cluster (you will see this in the logs) there's nothing more for you to do. Data will be saved to a folder called `cluster`, don't modify or remove that. Otherwise that's it, the player data will sync among cluster machines.
+Once servers indicate they are joined into a cluster (you will see this in the logs) there's nothing more for you to do. Data will be saved to a folder called `cluster`, don't modify or remove that.
 
 ## Wrapping Up
 
