@@ -7,6 +7,8 @@ while it is in alpha. For these instructions we'll assume your minecraft server 
 
 ## 1) Install Minecraft Forge
 
+If you already have a recent forge-enabled server installed you can skip these steps.
+
 - `mkdir ~/mverse`
 
 - `cd ~/mverse`
