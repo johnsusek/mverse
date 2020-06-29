@@ -1,0 +1,28 @@
+modLoader="javafml"
+loaderVersion="[31,)"
+issueTrackerURL="https://github.com/johnsusek/mverse/issues"
+
+[[mods]]
+modId="mverse-server"
+version="0.2"
+displayName="MVerse Server"
+# updateJSONURL="http://myurl.me/"
+authors="John Susek"
+description=''''''
+
+serverSideOnly = true
+acceptableRemoteVersions = "*"
+
+[[dependencies.mverse-server]]
+    modId="forge"
+    mandatory=true
+    versionRange="[31,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.mverse-server]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.15.2]"
+    ordering="NONE"
+    side="BOTH"

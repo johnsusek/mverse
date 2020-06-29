@@ -1,0 +1,28 @@
+modLoader="javafml"
+loaderVersion="[31,)"
+issueTrackerURL="https://github.com/johnsusek/mverse/issues"
+
+[[mods]]
+modId="mverse"
+version="0.2"
+displayName="MVerse"
+# updateJSONURL="http://myurl.me/" #optional
+# displayURL="http://example.com/" #optional
+# logoFile="mverse.png" #optional
+# credits="Thanks for this example mod goes to Java" #optional
+authors="John Susek <john@johnsolo.net>"
+description=''''''
+
+[[dependencies.mverse]]
+    modId="forge"
+    mandatory=true
+    versionRange="[31,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.mverse]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.15.2]"
+    ordering="NONE"
+    side="BOTH"

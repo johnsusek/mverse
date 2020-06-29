@@ -1,0 +1,7 @@
+package network.mverse.server;
+
+message TeleportSession {
+    required String teleportalId = 1;
+    required Float yaw = 2;
+    required Float pitch = 3;
+}

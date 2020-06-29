@@ -1,0 +1,15 @@
+package network.mverse.server;
+
+message Teleportal {
+    required Double posAX = 1;
+    required Double posAY = 2;
+    required Double posAZ = 3;
+    required String hostA = 4;
+    required int32 portA = 5;
+
+    optional Double posBX = 6;
+    optional Double posBY = 7;
+    optional Double posBZ = 8;
+    optional String hostB = 9;
+    optional int32 portB = 10;
+}
