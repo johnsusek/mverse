@@ -26,7 +26,7 @@ If you already have a recent forge-enabled server installed you can skip these s
 - Accept EULA by editing eula.txt
 
 - Try to launch again, it should be running a plain forge server now and prepare the spawn area.
-  - You will see a message "Unable to find spawn biome" and nothing else, give it a few minutes.
+  - You may see a message "Unable to find spawn biome" and nothing else, give it a few minutes while things generate.
 
 - After spawn is prepared, close down server (Ctrl-C) and continue on to installing MVerse
 
