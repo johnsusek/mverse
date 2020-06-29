@@ -23,7 +23,7 @@ MVerse:
 
 ### Client
 
-* Download the latest client .jar from the releases page
+* [Download the latest client .jar](https://github.com/johnsusek/mverse/releases/download/0.2/mverse-client-0.2.jar)
 * Place into mods folder of a forge-enabled minecraft installation
 * Connect to a server with MVerse installed.
   * Right now use `clio.mverse.network` or `thalia.mverse.network`
