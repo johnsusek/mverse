@@ -23,6 +23,7 @@ MVerse:
 
 ### Client
 
+* Install a [compatible forge client](http://files.minecraftforge.net/maven/net/minecraftforge/forge/1.15.2-31.2.27/forge-1.15.2-31.2.27-installer.jar)
 * [Download the latest client .jar](https://github.com/johnsusek/mverse/releases/download/0.2/mverse-client-0.2.jar)
 * Place into mods folder of a forge-enabled minecraft installation
 * Connect to a server with MVerse installed.
