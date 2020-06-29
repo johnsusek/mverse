@@ -82,9 +82,9 @@ Your server should always be behind a firewall of some kind, so you'll need to o
 
 - `export MVERSE_VERSION=0.2`
 
-- `java -cp "./mods/mverse-server-$MVERSE_VERSION.jar:forge-$FORGE_VERSION-launcher.jar" -Djgroups.dns.query=mverse.example.com -Dmverse.cluster_password=examplepass "net.minecraftforge.server.ServerMain" nogui`
+💡In the following command, you will have to change `mverse.example.com` and `examplepass` to match the cluster you are joining/starting.
 
-💡Note you will have to change `mverse.example.com` and `examplepass` to match the cluster you are joining/starting.
+- `java -cp "./mods/mverse-server-$MVERSE_VERSION.jar:forge-$FORGE_VERSION-launcher.jar" -Djgroups.dns.query=mverse.example.com -Dmverse.cluster_password=examplepass "net.minecraftforge.server.ServerMain" nogui`
 
 💡At this point you can also add any additional options to this java command as needed to customize for your environment, things like `-Xmx1024M -Xms1024M`, etc.
 
