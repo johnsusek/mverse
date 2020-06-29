@@ -32,7 +32,7 @@ If you already have a recent forge-enabled server installed you can skip these s
 
 ## 2) Install MVerse
 
-### Copy mod jar to minecraft mods folder
+### Download mod jar to server mods folder
 - `cd ~/mverse/mods`
 - `export MVERSE_VERSION=0.2.1`
 - `wget https://github.com/johnsusek/mverse/releases/download/$MVERSE_VERSION/mverse-server-$MVERSE_VERSION.jar`
