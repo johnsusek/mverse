@@ -3,7 +3,7 @@
 MVerse is fully functional but experimental right now.
 Don't just add this to your main minecraft server, at least without making a backup copy first.
 It's suggested to set up a new server for MVerse right now,
-while it is in alpha. For these instructions we'll assume your minecraft server is installed to ~/mverse but it can be anywhere. 
+while it is in alpha. For these instructions we'll assume your minecraft server is installed to ~/mverse but it can be anywhere.
 
 ## 1) Install Minecraft Forge
 
@@ -35,7 +35,7 @@ If you already have a recent forge-enabled server installed you can skip these s
 ### Copy mod jar to minecraft mods folder
 - `cd ~/mverse/mods`
 - `export MVERSE_VERSION=0.2.1`
-- `wget https://github.com/johnsusek/mverse/releases/download/0.2.1/mverse-server-$MVERSE_VERSION.jar`
+- `wget https://github.com/johnsusek/mverse/releases/download/$MVERSE_VERSION/mverse-server-$MVERSE_VERSION.jar`
 
 ## 3) Set Up Clustering
 
