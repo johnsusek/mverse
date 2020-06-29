@@ -95,5 +95,3 @@ Once servers indicate they are joined into a cluster (you will see this in the l
 ## Wrapping Up
 
 Please file a github issue if you have a question or constructive feedback. I welcome any PRs with enhancements or bug fixes, even documentation updates to the README.
-
-Remember, things are
