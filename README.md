@@ -29,7 +29,7 @@ MVerse:
 * [Download the latest client .jar](https://github.com/johnsusek/mverse/releases/download/0.2.2/mverse-client-0.2.2.jar)
 * Place into mods folder of a forge-enabled minecraft installation
 * Connect to a server with MVerse installed.
-  * Right now use `clio.mverse.network` or `thalia.mverse.network`
+  * Right now use *`clio.mverse.network`* or *`thalia.mverse.network`*
 * Do something on one server, then connect to the other.
   * Note your player follows you across servers.
 
