@@ -133,7 +133,7 @@ public class ClusterPlayer {
     };
 
     try {
-      executor.submit(saveTask).get(1000, TimeUnit.MILLISECONDS);
+      executor.submit(saveTask).get(5000, TimeUnit.MILLISECONDS);
     } catch (InterruptedException | ExecutionException | TimeoutException e) {
       LOGGER.error("Error saving player to cluster!");
       e.printStackTrace();
@@ -288,7 +288,7 @@ public class ClusterPlayer {
   }
 
   private void setOriginalPosition(double x, double y, double z, float yaw, float pitch) {
-    logger("Moving player from {} {} {} {} {}", player.getPosition().getX(), player.getPosition().getY(), player.getPosition().getZ(), player.rotationYaw, player.rotationPitch);
+    logger("Moving player from {} {} {} {} {}", player.getPosX(), player.getPosY(), player.getPosZ(), player.rotationYaw, player.rotationPitch);
     logger("Moving player to {} {} {} {} {}", x, y, z, yaw, pitch);
     player.rotationYaw = yaw;
     player.rotationPitch = pitch;

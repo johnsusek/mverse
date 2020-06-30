@@ -14,6 +14,7 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraftforge.event.entity.player.PlayerEvent.PlayerLoggedInEvent;
+import net.minecraftforge.event.entity.player.PlayerEvent.PlayerLoggedOutEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent.RightClickBlock;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import network.mverse.common.Registrations;
@@ -35,8 +36,19 @@ public class HandleGeneralEvents {
     clusterPlayer.loadFromCluster();
   }
 
-  // A player event has happened that should mark the player for the next
-  // sync tick, so do that here
+  @SubscribeEvent
+  public void handleLoggedOut(PlayerLoggedOutEvent event) {
+    if (!(event.getPlayer() instanceof ServerPlayerEntity)) {
+      return;
+    }
+
+    ServerPlayerEntity player = (ServerPlayerEntity) event.getPlayer();
+    ClusterPlayer clusterPlayer = new ClusterPlayer(player);
+
+    clusterPlayer.saveToCluster();
+
+    ClusterPlayer.players.remove(player);
+  }
 
   @SubscribeEvent
   public void handleRightClickBlock(RightClickBlock event) {

@@ -4,11 +4,11 @@ issueTrackerURL="https://github.com/johnsusek/mverse/issues"
 
 [[mods]]
 modId="mverse"
-version="0.2"
+version="0.2.2"
 displayName="MVerse"
 # updateJSONURL="http://myurl.me/" #optional
 # displayURL="http://example.com/" #optional
-# logoFile="mverse.png" #optional
+logoFile="logo.png"
 # credits="Thanks for this example mod goes to Java" #optional
 authors="John Susek <john@johnsolo.net>"
 description=''''''

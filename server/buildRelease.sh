@@ -6,7 +6,7 @@ set -e
 # Makes a fat jar with the mod + outside libs
 #
 
-MVERSE_VERSION=0.2.1
+MVERSE_VERSION=0.2.2
 
 rm -rf ./tmp
 mkdir -p ./tmp

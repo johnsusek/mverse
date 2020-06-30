@@ -34,7 +34,7 @@ If you already have a recent forge-enabled server installed you can skip these s
 
 ### Copy mod jar to minecraft mods folder
 - `cd ~/mverse/mods`
-- `export MVERSE_VERSION=0.2.1`
+- `export MVERSE_VERSION=0.2.2`
 - `wget https://github.com/johnsusek/mverse/releases/download/$MVERSE_VERSION/mverse-server-$MVERSE_VERSION.jar`
 
 ## 3) Set Up Clustering
@@ -80,7 +80,7 @@ Your server should always be behind a firewall of some kind, so you'll need to o
 
 - `export FORGE_VERSION=1.15.2-31.2.27`
 
-- `export MVERSE_VERSION=0.2.1`
+- `export MVERSE_VERSION=0.2.2`
 
 💡In the following command, you will have to change `mverse.example.com` and `examplepass` to match the cluster you are joining/starting.
 
