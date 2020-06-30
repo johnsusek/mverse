@@ -18,8 +18,7 @@ MVerse:
 
 ## Features
 
-* Seamlessly sync player data across servers, creating an "MVerse"
-* Buildable portals between servers in the cluster (Coming Soon)
+* Seamlessly sync player data across servers, creating an "MVerse". Play as normal, but your character follows you across servers!
 
 ## Installing
 
