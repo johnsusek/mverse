@@ -1,5 +1,7 @@
 # MVerse
 
+<img align="right" width="320" height="auto" src="https://user-images.githubusercontent.com/611996/85967969-4fe09d80-b989-11ea-9100-3976bf05ab8a.png">
+
 A Minecraft Forge mod to easily cluster Minecraft servers into a multiverse.
 
 Once installed on your servers, all player data is synchronized and the cluster becomes the "source of truth" for player data.
@@ -23,7 +25,8 @@ MVerse:
 
 ### Client
 
-* Download the latest client .jar from the releases page
+* Install a [compatible forge client](http://files.minecraftforge.net/maven/net/minecraftforge/forge/1.15.2-31.2.27/forge-1.15.2-31.2.27-installer.jar)
+* [Download the latest client .jar](https://github.com/johnsusek/mverse/releases/download/0.2/mverse-client-0.2.jar)
 * Place into mods folder of a forge-enabled minecraft installation
 * Connect to a server with MVerse installed.
   * Right now use `clio.mverse.network` or `thalia.mverse.network`

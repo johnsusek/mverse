@@ -9,24 +9,20 @@ while it is in alpha. For these instructions we'll assume your minecraft server 
 
 If you already have a recent forge-enabled server installed you can skip these steps.
 
-- `mkdir ~/mverse`
-
-- `cd ~/mverse`
-
-- `export FORGE_VERSION=1.15.2-31.2.27`
-
-- `wget http://files.minecraftforge.net/maven/net/minecraftforge/forge/$FORGE_VERSION/forge-$FORGE_VERSION-launcher.jar`
-
-- `wget http://files.minecraftforge.net/maven/net/minecraftforge/forge/$FORGE_VERSION/forge-$FORGE_VERSION-installer.jar`
-
-- `java -jar forge-$FORGE_VERSION-installer.jar --installServer`
-
-- `java -cp "forge-$FORGE_VERSION-launcher.jar" "net.minecraftforge.server.ServerMain" nogui`
+```
+mkdir ~/mverse
+cd ~/mverse
+export FORGE_VERSION=1.15.2-31.2.27
+wget http://files.minecraftforge.net/maven/net/minecraftforge/forge/$FORGE_VERSION/forge-$FORGE_VERSION-launcher.jar
+wget http://files.minecraftforge.net/maven/net/minecraftforge/forge/$FORGE_VERSION/forge-$FORGE_VERSION-installer.jar
+java -jar forge-$FORGE_VERSION-installer.jar --installServer
+java -cp "forge-$FORGE_VERSION-launcher.jar" "net.minecraftforge.server.ServerMain" nogui
+```
 
 - Accept EULA by editing eula.txt
 
 - Try to launch again, it should be running a plain forge server now and prepare the spawn area.
-  - You will see a message "Unable to find spawn biome" and nothing else, give it a few minutes.
+  - You may see a message "Unable to find spawn biome" and nothing else, give it a few minutes while things generate.
 
 - After spawn is prepared, close down server (Ctrl-C) and continue on to installing MVerse
 
@@ -97,5 +93,3 @@ Once servers indicate they are joined into a cluster (you will see this in the l
 ## Wrapping Up
 
 Please file a github issue if you have a question or constructive feedback. I welcome any PRs with enhancements or bug fixes, even documentation updates to the README.
-
-Remember, things are
