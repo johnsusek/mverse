@@ -10,7 +10,7 @@ For players, this gives the effect of one seamless multiverse where your charact
 
 ## Features
 
-- Seamlessly sync player data across servers, creating an "MVerse". Play as normal, but your character follows you across servers!
+- Seamlessly sync player data across servers, creating an "MVerse". Play as normal, but your character follows you!
 - Can work with other forge mods as long as they are installed on all servers.
 - Works at a low level so all custom metadata on the player is synchronized
 - Uses powerful [Infinispan](https://infinispan.org/features/) clustering technology.
