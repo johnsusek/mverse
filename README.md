@@ -13,7 +13,7 @@ For players, this gives the effect of one seamless multiverse where your charact
 - Seamlessly sync player data across servers, creating an "MVerse". Play as normal, but your character follows you!
 - Can work with other forge mods as long as they are installed on all servers.
 - Works at a low level so all custom metadata on the player is synchronized
-- Uses powerful [Infinispan](https://infinispan.org/features/) clustering technology.
+- Uses powerful [Infinispan](https://infinispan.org/features/) clustering technology
 - Doesn't require a centralized proxy server; servers talk to each other in a p2p fashion and discover each other through DNS
 - Doesn't require `online-mode=false`
 
