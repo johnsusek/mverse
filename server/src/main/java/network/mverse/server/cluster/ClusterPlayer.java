@@ -88,17 +88,18 @@ public class ClusterPlayer {
 
     try {
 
-      if (playerBytes == null) {
-        logger("Player from cluster was null, new player!");
-        return;
+      if (playerBytes != null) {
+        logger("Loading existing player from cluster");
+
+        CompoundNBT clusterPlayerNBT = CompressedStreamTools.readCompressed(new ByteArrayInputStream(playerBytes));
+
+        // Now that we've loaded the NBT from the cluster, reload the player
+        // with the cluster data + adjustments
+        reload(clusterPlayerNBT);
       }
-
-      CompoundNBT clusterPlayerNBT = CompressedStreamTools.readCompressed(new ByteArrayInputStream(playerBytes));
-
-      // Now that we've loaded the NBT from the cluster, reload the player
-      // with the cluster data + adjustments
-      reload(clusterPlayerNBT);
-
+      else {
+        logger("Player from cluster was null, a new player has joined!");
+      }
     } catch (Exception e) {
       LOGGER.error("There was an error syncing the MVerse player from the cluster, please see below for more details. {}", player.getUniqueID());
       e.printStackTrace();
@@ -109,7 +110,9 @@ public class ClusterPlayer {
       // the server operator what the issue is.
       player.disconnect();
     } finally {
+      logger("Removing player from playersLoading...");
       ClusterPlayer.playersLoading.remove(this);
+      this.saveToCluster();
     }
   }
 
@@ -236,7 +239,18 @@ public class ClusterPlayer {
     int spawnZ = playerNBT.getInt("SpawnZ");
     int dimension = playerNBT.getInt("Dimension");
 
+    // If player has joined immediately after death on another server
+    // we have to reset their health to not cause them to get into a death loop
+    if (clusterPlayerNBT.getShort("DeathTime") > 0) {
+      clusterPlayerNBT.putShort("DeathTime", (short)0);
+    }
+
+    if (clusterPlayerNBT.getFloat("Health") < 0.01) {
+      clusterPlayerNBT.putFloat("Health", 100.0f);
+    }
+
     // Apply NBT from cluster to the player
+    logger("deserializeNBT...");
     player.deserializeNBT(clusterPlayerNBT);
 
     // Now the `player` variable has values from the cluster
@@ -268,8 +282,9 @@ public class ClusterPlayer {
     playerNBT.putInt("Dimension", dimension);
     player.deserializeNBT(playerNBT);
 
-    logger("Spawn is now {} {} {}", playerNBT.getInt("SpawnX"), playerNBT.getInt("SpawnY"), playerNBT.getInt("SpawnZ"));
-    logger("Dimension is now {}", playerNBT.getInt("Dimension"));
+    CompoundNBT playerNBTNow = player.serializeNBT();
+    logger("Spawn is now {} {} {}", playerNBTNow.getInt("SpawnX"), playerNBTNow.getInt("SpawnY"), playerNBTNow.getInt("SpawnZ"));
+    logger("Dimension is now {}", playerNBTNow.getInt("Dimension"));
   }
 
   private void setOriginalPosition(double x, double y, double z, float yaw, float pitch) {
