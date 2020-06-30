@@ -1,6 +1,6 @@
 # MVerse
 
-<img align="right" width="320" height="auto" src="https://user-images.githubusercontent.com/611996/85967969-4fe09d80-b989-11ea-9100-3976bf05ab8a.png">
+<img align="right" width="280" height="auto" src="https://user-images.githubusercontent.com/611996/85967969-4fe09d80-b989-11ea-9100-3976bf05ab8a.png">
 
 A Minecraft Forge mod to easily cluster Minecraft servers into a multiverse.
 
